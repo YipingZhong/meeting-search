@@ -2,17 +2,31 @@
   "calendar": [
     {
       "id": "12345",
-      "title": "Acme Proposal Meeting",
+      "title": "Acme Older Proposal Meeting",
       "invitees": "dave, john, bob, carol",
       "matching_terms": ["dave", "john", "bob", "carol", "acme"],
       "date": "2019-01-10 10:00:00"
     },
     {
       "id": "12345",
+      "title": "Acme Proposal Meeting",
+      "invitees": "dave, john, bob, carol",
+      "matching_terms": ["dave", "john", "bob", "carol", "acme"],
+      "date": "2019-01-11 10:00:00"
+    },
+    {
+      "id": "12345",
       "title": "Acme Final Delivery Meeting",
       "invitees": "dave, john, bob, alice",
       "matching_terms": ["dave", "john", "bob", "alice", "acme"],
-      "date": "2019-03-01 11:00:00"
+      "date": "2020-11-01 11:00:00"
+    },
+    {
+      "id": "12345",
+      "title": "Acme Latest Final Delivery Meeting",
+      "invitees": "dave, john, bob, alice",
+      "matching_terms": ["dave", "john", "bob", "alice", "acme"],
+      "date": "2020-11-11 11:00:00"
     }
   ],
   "contacts": [
@@ -32,7 +46,7 @@
       "emails": ["bob@acme.co"],
       "phones": ["+44 171 6666 5555"],
       "matching_terms": ["acme", "robert", "roe", "bob"],
-      "last_contact": "2019-02-29"
+      "last_contact": "2019-02-26"
     },
     {
       "id": "787661",
@@ -41,7 +55,16 @@
       "emails": ["alice@other.co"],
       "phones": ["+1 415 555 6666"],
       "matching_terms": ["alice", "other", "alice smith"],
-      "last_contact": "2019-02-29"
+      "last_contact": "2019-02-28"
+    },
+    {
+      "id": "12345",
+      "name": "John Doe",
+      "company": "Acme Inc",
+      "emails": ["john@acme.co", "doe@gmail.com"],
+      "phones": ["650-555-5555", "+44 171 5555 5555"],
+      "matching_terms": ["acme", "john", "john doe"],
+      "last_contact": "2019-02-26"
     }
   ],
   "dropbox": [
@@ -89,13 +112,37 @@
     {
       "user": "@acmecorp",
       "message": "We're hiring in Boston!",
-      "timestamp": "2019-02-29",
+      "timestamp": "2019-02-02",
+      "matching_terms": ["acme", "hiring", "boston"]
+    },
+    {
+      "user": "@acmecorp",
+      "message": "We're hiring in Boston1!",
+      "timestamp": "2020-02-04",
+      "matching_terms": ["acme", "hiring", "boston"]
+    },
+    {
+      "user": "@acmecorp",
+      "message": "We're hiring in Boston2!",
+      "timestamp": "2019-02-12",
+      "matching_terms": ["acme", "hiring", "boston"]
+    },
+    {
+      "user": "@acmecorp",
+      "message": "We're hiring in Boston3!",
+      "timestamp": "2019-02-19",
+      "matching_terms": ["acme", "hiring", "boston"]
+    },
+    {
+      "user": "@acmecorp",
+      "message": "We're hiring in Boston4!",
+      "timestamp": "2019-02-27",
       "matching_terms": ["acme", "hiring", "boston"]
     },
     {
       "user": "@acmecorp",
       "message": "We're no longer hiring in Timbuktu",
-      "timestamp": "2019-02-27",
+      "timestamp": "2019-02-24",
       "matching_terms": ["acme", "hiring", "timbuktu"]
     }
   ],
@@ -105,6 +152,14 @@
       "channel": "chatter",
       "author": "alice",
       "message": "Who's up for lunch right now?",
+      "timestamp": "2019-02-26 11:00:00",
+      "matching_terms": ["alice", "chatter", "lunch"]
+    },
+    {
+      "id": "123",
+      "channel": "chatter",
+      "author": "alice",
+      "message": "Long message long message long message long message long message long message long message long message long message",
       "timestamp": "2019-02-26 11:00:00",
       "matching_terms": ["alice", "chatter", "lunch"]
     },

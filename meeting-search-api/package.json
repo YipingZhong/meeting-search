@@ -1,5 +1,9 @@
 {
     "scripts": {
         "start": "json-server --watch db.json --port 3004"
+    },
+    "dependencies": {
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0"
     }
 }

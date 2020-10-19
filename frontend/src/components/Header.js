@@ -11,24 +11,35 @@ class Header extends React.Component{
         this.setState({
             searchText: value
         })
-        this.props.search(value)
+    };
+
+    handleKeyDown = e =>{
+        if(e.key === "Enter"){
+            this.props.search(this.state.searchText)
+        }
+    };
+
+    handleClick = () => {
+        this.props.search(this.state.searchText)
     };
 
     render(){
         return (
             <div>
-                <nav className="navbar" role="navigation" aria-label="main navigation">
-                    <div className="navbar-menu">
-                        <div className="navbar-start">
-                            <div className="navbar-item" href="https://bulma.io">Home</div>
+                <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+                    <div className="navbar-menu is-active">
+                        <div className="navbar-start is-shrink center">
                             <div className="navbar-item">
-                                <input className="input" type="text" placeholder="Search" value={this.state.searchText} onChange={this.handleChange}/>
+                                <h1><strong>Home</strong></h1>
                             </div>
-                            <div className="navbar-item"><button>Go</button></div>
+                            <div className="navbar-item search-box">
+                                <input className="input" type="text" placeholder="Search" 
+                                value={this.state.searchText} onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
+                            </div>
+                            <div className="navbar-item"><button className="button is-light" onClick={this.handleClick} >Search</button></div>
                         </div>
                     </div>
                 </nav>
-                <hr className="navbar-divider"></hr>
             </div>
         );
     }
